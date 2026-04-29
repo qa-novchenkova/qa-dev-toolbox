@@ -58,7 +58,7 @@ function App() {
   return (
     <main className="app-shell">
       <header className="hero">
-        <p className="eyebrow">Мини-инструментарий QA + developer</p>
+        <p className="eyebrow">QA инструментарий + developer mini toolkit</p>
         <h1>QA Dev Toolbox</h1>
         <p className="hero-text">
           Портфолио-проект на React: с полезными QA-инструментами, автотестами, сборкой через GitHub Actions и автодеплоем на GitHub Pages.
