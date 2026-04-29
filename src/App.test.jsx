@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react'
+import { fireEvent, render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, expect, it, vi } from 'vitest'
 import App from './App'
@@ -39,5 +39,23 @@ describe('App', () => {
 
     expect(screen.getByText('Error')).toBeInTheDocument()
     expect(screen.getByText('Warning')).toBeInTheDocument()
+  })
+
+  it('opens and closes project information modal', async () => {
+    const user = userEvent.setup()
+    render(<App />)
+
+    await user.click(screen.getByRole('button', { name: 'О проекте' }))
+
+    const dialog = screen.getByRole('dialog', { name: 'QA Dev Toolbox' })
+
+    expect(dialog).toBeInTheDocument()
+    expect(within(dialog).getByText('CI/CD на примере этого проекта')).toBeInTheDocument()
+    expect(within(dialog).getByText('GitHub Actions')).toBeInTheDocument()
+    expect(within(dialog).getByText('GitHub Pages')).toBeInTheDocument()
+
+    await user.click(screen.getByRole('button', { name: 'Закрыть окно' }))
+
+    expect(screen.queryByRole('dialog', { name: 'QA Dev Toolbox' })).not.toBeInTheDocument()
   })
 })

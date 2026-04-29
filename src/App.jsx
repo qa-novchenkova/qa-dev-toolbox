@@ -30,6 +30,7 @@ const initialBug = {
 
 function App() {
   const [activeTab, setActiveTab] = useState('bug')
+  const [isInfoOpen, setIsInfoOpen] = useState(false)
   const [bug, setBug] = useState(initialBug)
   const [checklistCategory, setChecklistCategory] = useState('ui')
   const [testData, setTestData] = useState(() => generateTestData())
@@ -58,11 +59,17 @@ function App() {
   return (
     <main className="app-shell">
       <header className="hero">
-        <p className="eyebrow">QA инструментарий + developer mini toolkit</p>
-        <h1>QA Dev Toolbox</h1>
-        <p className="hero-text">
-          Портфолио-проект на React: с полезными QA-инструментами, автотестами, сборкой через GitHub Actions и автодеплоем на GitHub Pages.
-        </p>
+        <button className="info-button" type="button" onClick={() => setIsInfoOpen(true)}>
+          О проекте
+        </button>
+        <div>
+          <p className="eyebrow">QA инструментарий + developer mini toolkit</p>
+          <h1>QA Dev Toolbox</h1>
+          <p className="hero-text">
+            Портфолио-проект на React: с полезными QA-инструментами, автотестами,
+            сборкой через GitHub Actions и автодеплоем на GitHub Pages.
+          </p>
+        </div>
       </header>
 
       <nav className="tabs" aria-label="Разделы QA Dev Toolbox">
@@ -248,6 +255,7 @@ function App() {
       </section>
 
       {copyStatus && <div className="toast">{copyStatus}</div>}
+      {isInfoOpen && <InfoModal onClose={() => setIsInfoOpen(false)} />}
     </main>
   )
 }
@@ -306,6 +314,84 @@ function Preview({ title, value, onCopy }) {
         </button>
       </div>
       <pre>{value}</pre>
+    </div>
+  )
+}
+
+function InfoModal({ onClose }) {
+  return (
+    <div className="modal-backdrop" role="presentation" onClick={onClose}>
+      <section
+        aria-labelledby="project-info-title"
+        className="modal"
+        role="dialog"
+        aria-modal="true"
+        onClick={(event) => event.stopPropagation()}
+      >
+        <div className="modal-header">
+          <div>
+            <p className="eyebrow">Как устроен проект</p>
+            <h2 id="project-info-title">QA Dev Toolbox</h2>
+          </div>
+          <button className="modal-close" type="button" onClick={onClose} aria-label="Закрыть окно">
+            x
+          </button>
+        </div>
+
+        <div className="modal-content">
+          <section>
+            <h3>Стек проекта</h3>
+            <ul className="info-list">
+              <li>
+                <strong>React</strong> отвечает за интерфейс: вкладки, формы,
+                кнопки, модальное окно и обновление данных на странице.
+              </li>
+              <li>
+                <strong>JavaScript</strong> содержит логику инструментов:
+                генерацию баг-репорта, чек-листов, тестовых данных, проверку
+                JSON и regex.
+              </li>
+              <li>
+                <strong>Vite</strong> запускает сайт локально и собирает
+                production-версию в папку <code>dist</code>.
+              </li>
+              <li>
+                <strong>Vitest и Testing Library</strong> запускают автотесты:
+                проверяют функции и базовое поведение интерфейса.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>CI/CD на примере этого проекта</h3>
+            <ol className="pipeline-list">
+              <li>Изменения вносятся локально и сохраняются в commit.</li>
+              <li>После <code>git push</code> код попадает в GitHub-репозиторий.</li>
+              <li>
+                <strong>GitHub Actions</strong> автоматически запускает workflow:
+                устанавливает зависимости, запускает тесты и собирает проект.
+              </li>
+              <li>
+                Если тесты и сборка прошли успешно, workflow публикует готовую
+                папку <code>dist</code>.
+              </li>
+              <li>
+                <strong>GitHub Pages</strong> принимает собранные файлы и
+                обновляет опубликованный сайт.
+              </li>
+            </ol>
+          </section>
+
+          <section>
+            <h3>Что показывает проект</h3>
+            <p>
+              Проект демонстрирует полный цикл: разработка локально, проверка
+              автотестами, автоматическая сборка и деплой. Если проверка падает,
+              новая версия сайта не публикуется.
+            </p>
+          </section>
+        </div>
+      </section>
     </div>
   )
 }
