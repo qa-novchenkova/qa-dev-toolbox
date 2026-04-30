@@ -14,9 +14,8 @@ https://qa-novchenkova.github.io/qa-dev-toolbox/
 
 ### Интерфейс приложения
 
-<a href="https://drive.google.com/file/d/1tYkUMll5_Qcrtw5PycFHsJr-eljkLkl2/view?usp=sharing" target="_blank">
-  <img src="https://drive.google.com/file/d/1tYkUMll5_Qcrtw5PycFHsJr-eljkLkl2/view?usp=sharing" alt="Интерфейс приложения" width="500"/>
-</a>
+<img src="https://drive.google.com/file/d/1tYkUMll5_Qcrtw5PycFHsJr-eljkLkl2/view?usp=sharing" alt="Интерфейс приложения" width="500"/>
+
 
 <a href="https://drive.google.com/file/d/1vvTPZ2TORKslE9z5hfJgI-VXryRf3OA2/view?usp=sharing" target="_blank">
   <img src="https://drive.google.com/file/d/1vvTPZ2TORKslE9z5hfJgI-VXryRf3OA2/view?usp=sharing" alt="Интерфейс приложения" width="500"/>
