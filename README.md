@@ -14,23 +14,23 @@ https://qa-novchenkova.github.io/qa-dev-toolbox/
 
 ### Интерфейс приложения
 
-<a href="docs/app-interface-1.png">
+<a href="docs/app-interface-1.png" target="_blank">
   <img src="docs/app-interface-1.png" alt="Интерфейс приложения" width="500">
 </a>
-
-<a href="docs/app-interface-2.png">
+<br><br>
+<a href="docs/app-interface-2.png" target="_blank">
   <img src="docs/app-interface-2.png" alt="Интерфейс приложения" width="500">
 </a>
 
 ### GitHub Actions workflow
 
-<a href="docs/github-actions.png">
+<a href="docs/github-actions.png" target="_blank">
   <img src="docs/github-actions.png" alt="GitHub Actions workflow" width="500">
 </a>
 
 ### Vitest Test Report
 
-<a href="docs/vitest-report.png">
+<a href="docs/vitest-report.png" target="_blank">
   <img src="docs/vitest-report.png" alt="Vitest Test Report" width="500">
 </a>
 
