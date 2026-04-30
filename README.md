@@ -14,24 +14,24 @@ https://qa-novchenkova.github.io/qa-dev-toolbox/
 
 ### Интерфейс приложения
 
-<a href="https://drive.google.com/file/d/1tYkUMll5_Qcrtw5PycFHsJr-eljkLkl2/view?usp=sharing" target="_blank">
-  <img src="https://drive.google.com/file/d/1tYkUMll5_Qcrtw5PycFHsJr-eljkLkl2/view?usp=sharing" alt="Интерфейс приложения" width="500"/>
+<a href="docs/app-interface-1.png">
+  <img src="docs/app-interface-1.png" alt="Интерфейс приложения" width="500">
 </a>
 
-<a href="https://drive.google.com/file/d/1vvTPZ2TORKslE9z5hfJgI-VXryRf3OA2/view?usp=sharing" target="_blank">
-  <img src="https://drive.google.com/file/d/1vvTPZ2TORKslE9z5hfJgI-VXryRf3OA2/view?usp=sharing" alt="Интерфейс приложения" width="500"/>
+<a href="docs/app-interface-2.png">
+  <img src="docs/app-interface-2.png" alt="Интерфейс приложения" width="500">
 </a>
 
 ### GitHub Actions workflow
 
-<a href="https://drive.google.com/file/d/1TtpZLWkEZyuUobff1KUuksclDbmU9iay/view?usp=sharing" target="_blank">
-  <img src="https://drive.google.com/file/d/1TtpZLWkEZyuUobff1KUuksclDbmU9iay/view?usp=sharing" alt="GitHub Actions workflow" width="500"/>
+<a href="docs/github-actions.png">
+  <img src="docs/github-actions.png" alt="GitHub Actions workflow" width="500">
 </a>
 
 ### Vitest Test Report
 
-<a href="https://drive.google.com/file/d/1cMWhBGaaZHuYp7S66-VVNM8W5JoH-Ce-/view?usp=sharing" target="_blank">
-  <img src="https://drive.google.com/file/d/1cMWhBGaaZHuYp7S66-VVNM8W5JoH-Ce-/view?usp=sharing" alt="Vitest Test Report" width="500"/>
+<a href="docs/vitest-report.png">
+  <img src="docs/vitest-report.png" alt="Vitest Test Report" width="500">
 </a>
 
 ## О проекте
